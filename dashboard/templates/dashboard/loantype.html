@@ -1,0 +1,51 @@
+{%extends 'dashboard/base.html' %}
+{%block content %}
+<section id="main-content">
+                    <div class="space-30"></div>
+                    <div class="container">
+                     
+                        <div class="row">
+                           
+                            <div class="col-md-12">
+                                <div class="panel">
+                                    <header class="panel-heading">
+                                        <h2 class="panel-title ">Products</h2><button type="button"
+													              class="btn btn-primary pull-right btn-sm js-add-product"
+													              data-url="{% url 'dashboard:create_product' %}">
+													                <span class="glyphicon glyphicon-pencil"></span> Add Products <span class="fa fa-plus"></span></a>
+													        </button>
+                                    </header>
+                                    <div class="panel-body">
+	                                    <div class="table-responsive">
+			                                <table class="table table-hover table-striped" id="product-table">
+			                                    <thead>
+			                                        <tr>
+			                                            <th>#</th>
+			                                            <th>Name</th>
+			                                            <th>Rate</th>
+			                                            <th>Tenure</th>
+			                                            <th>Frequency</th>
+			                                            <th>Guarantor</th>
+			                                            <th>Collateral</th>
+			                                            <th>Actions</th>
+			                                        </tr>
+			                                    </thead>
+			                                    <tbody>
+			                                    {% include 'dashboard/includes/partial_product_list.html' %}
+			                                    </tbody>
+			                                </table>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="modal  " id="modal-product">
+	                                <div class="modal-dialog">
+		                                <div class="modal-content"></div>
+	                                </div>
+                                </div>
+                            </div><!--col end-->
+                        </div>
+                    </div><!-- end of container-->
+
+                    <!--footer start-->
+                    
+{% endblock %}

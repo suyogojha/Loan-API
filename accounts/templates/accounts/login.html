@@ -1,0 +1,45 @@
+
+<html>
+<header>
+{% load static %}
+<title>Login</title>
+<link rel="stylesheet" type="text/css" href="{% static 'dashboard/css/bootstrap.min.css' %}">
+<link href="https://fonts.googleapis.com/css?family=Raleway|Roboto+Condensed" rel="stylesheet">
+<link rel="stylesheet" type="text/css" href="{% static 'myaccount/style.css' %}">
+<script  href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script
+  src="https://code.jquery.com/jquery-3.2.1.min.js"
+  integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+  crossorigin="anonymous"></script>
+  
+  </header>
+  
+<body>
+
+<div class="container">
+    <div class="row">
+	    <div class="col-sm-6 col-sm-push-3 login-div">
+		    {% if message %}
+			<div class="alert alert-danger alert-dismissable "><a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>{{ message }}</div>
+			{% endif %}
+			<div class='card'>
+				<form method="post" class="">
+				{% csrf_token %}
+				{% for field in form %}
+					<div class="form-group">
+						{{field.label_tag}}
+						{{ field }}
+					</div>
+				{% endfor %}
+					<button type="submit" name="submit" class="btn btn-success form-control"/>Login</button>
+				</form>
+			</div>
+		</div>
+	</div>
+</div>
+    
+  
+  
+</body>
+</html>
+ 

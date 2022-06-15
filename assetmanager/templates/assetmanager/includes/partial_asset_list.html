@@ -1,0 +1,30 @@
+													{% for asset in asset_list %}
+			                                        <tr>
+			                                            <th scope="row">{{asset.pk}}</th>
+			                                            <td>{{asset.name}}</td>
+			                                            <td>{{asset.expiry_date}}</td>
+			                                            <td>{{asset.inspection_date}} </td>
+			                                            <td>{{asset.owner}}</td>
+			                                            <td>{{asset.status}}</td>
+			                                            <td>
+				                                            
+					                                            <button type="button"
+														              class="btn btn-success btn-sm js-update-product"
+														              data-url="{% url 'assetmanager:update_asset' asset.pk %}">
+														                <span class="glyphicon glyphicon-pencil"></span> Edit
+														        </button>
+														        <button type="button"
+														              class="btn btn-warning btn-sm js-delete-product"
+														              data-url="{% url 'assetmanager:delete_asset' asset.pk %}">
+														                <span class="glyphicon glyphicon-pencil"></span> Delete
+														        </button-->
+
+														   
+													    </td>
+													</tr>
+			                                       {% empty %}
+			                                       <tr>
+				                                       <td colspan="7" class="text-center">No Asset Found</td>
+			                                       </tr>
+			                                       {% endfor %}
+			                                       

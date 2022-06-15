@@ -1,0 +1,11 @@
+<form method="post" class="js-product-create-form" action="{% url 'dashboard:create_product' %}">
+{%csrf_token %}
+	<div class="modal-header mtitle">
+		<button type="button" class="close" data-dismiss="modal"  aria-label="Close"><span aria-hidden="true">&times;</span></button>
+		<h4 class="modla-title">Create New Product</h4>
+		{% include 'dashboard/includes/partial_product_form.html' %}
+	<div class="modal-footer">
+	<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+	<button class="btn btn-primary" type="submit">Create</button>
+
+</form>

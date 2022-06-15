@@ -1,0 +1,51 @@
+
+{%extends 'dashboard/base.html' %}
+{%block content %}
+<section id="main-content">
+                    <div class="space-30"></div>
+                    <div class="container">
+                     
+                        <div class="row">
+                           
+                            <div class="col-md-12">
+                                <div class="panel">
+                                    <header class="panel-heading">
+                                        <h2 class="panel-title ">assets</h2><button type="button"
+													              class="btn btn-primary pull-right btn-sm js-add-product"
+													              data-url="{% url 'assetmanager:create_asset' %}">
+													                Add assets <span class="fa fa-plus"></span></a>
+													        </button>
+                                    </header>
+                                    <div class="panel-body">
+	                                    <div class="table-responsive">
+			                                <table class="table table-hover table-striped" id="product-table">
+			                                    <thead>
+			                                        <tr>
+			                                            <th>#</th>
+			                                            <th>Name</th>
+			                                            <th>Exp</th>
+			                                            <th>Inspection Data</th>
+			                                            <th>Owner</th>
+			                                            <th>Status</th>
+			                                            <th>Actions</th>
+			                                        </tr>
+			                                    </thead>
+			                                    <tbody>
+			                                    {% include 'assetmanager/includes/partial_asset_list.html' %}
+			                                    </tbody>
+			                                </table>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="modal modal-overflow " id="modal-product">
+	                                <div class="modal-dialog">
+		                                <div class="modal-content"></div>
+	                                </div>
+                                </div>
+                            </div><!--col end-->
+                        </div>
+                    </div><!-- end of container-->
+
+                    <!--footer start-->
+                    
+{% endblock %}

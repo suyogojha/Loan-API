@@ -1,0 +1,13 @@
+<html>
+<body>
+<form method="post" enctype="multipart/form-data">
+{% csrf_token %}
+{{errors}}
+{{usererrors}}
+{{userform.as_p}}
+{{employeeform.as_p}}
+
+<button type="submit" name="submit">Submit</button>
+</form>
+</body>
+</html>

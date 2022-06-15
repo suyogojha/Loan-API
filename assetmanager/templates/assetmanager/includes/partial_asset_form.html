@@ -1,0 +1,27 @@
+{%for field in form %}
+			<div class="form-group">
+				{{field.label_tag}}
+				{{field}}
+				{% for error in field.errors %}
+				<p class="error">{{error}}</p>
+				{%endfor%}
+			</div>
+		{%endfor%}
+<hr>
+{{ formset.management_form }}
+
+{%for documentform in formset %}
+
+<div class="form-container form-inline  formset">
+	{% for field in documentform %}
+		     <div class="form-group  ">
+				{{field}}
+				{% for error in field.errors %}
+				<p class="error">{{error}}</p>
+				{%endfor%}
+			</div>
+	{%endfor%}
+</div>
+{% endfor %}
+<button type="button" class="btn js-add-formset formset"  id="add_more">Add more</button>
+<button type="button" class="btn js-remove-formset formset">Remove last</button>

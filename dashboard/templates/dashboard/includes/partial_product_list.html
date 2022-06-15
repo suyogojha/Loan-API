@@ -1,0 +1,30 @@
+													{% for product in loantype %}
+			                                        <tr>
+			                                            <th scope="row">{{product.pk}}</th>
+			                                            <td>{{product.name}}</td>
+			                                            <td>{{product.rate}}%</td>
+			                                            <td>{{product.tenure}} months</td>
+			                                            <td>{{product.payment_frequency}}</td>
+			                                            <td>{{product.need_guarantor}}</td>
+			                                            <td>{{product.need_collateral}}</td>
+			                                            <td>
+				                                            
+					                                            <button type="button"
+														              class="btn btn-success btn-sm js-update-product"
+														              data-url="{% url 'dashboard:update_product' product.pk %}">
+														                <span class="glyphicon glyphicon-pencil"></span> Edit
+														        </button>
+														        <button type="button"
+														              class="btn btn-warning btn-sm js-delete-product"
+														              data-url="{% url 'dashboard:delete_product' product.pk %}">
+														                <span class="glyphicon glyphicon-pencil"></span> Delete
+														        </button>
+
+														   
+													    </td>
+													</tr>
+			                                       {% empty %}
+			                                       <tr>
+				                                       <td colspan="7" class="text-center">No Porducts Found</td>
+			                                       </tr>
+			                                       {% endfor %}

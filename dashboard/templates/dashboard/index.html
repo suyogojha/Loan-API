@@ -1,0 +1,247 @@
+
+{% extends 'dashboard/base.html' %}
+                {% block title%}Loan System {%endblock%}
+                {% block content %}
+                <!--start main content-->
+                <section id="main-content">
+                    <div class="space-30"></div>
+                    <div class="container">
+                        {% if messages %}
+                        <ul class="messages">
+                        {% for message in messages %}
+                            <li{% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</li>
+                        {% endfor %}
+                        </ul>
+                        {% endif %}
+                                 
+                        <div class="row">
+                            <div class="col-sm-12">
+                                <div class="col-md-3 badgewrapper text-center bg-success">
+                                    <span class="badgeresult">100</span>
+                                    <span class="resultsupport">Open Loans</span>
+                                </div>
+                                <div class="col-md-3 badgewrapper text-center bg-success">
+                                    <span class="badgeresult ">10000</span>
+                                    <span class="resultsupport">Total Collections</span>
+                                </div>
+                                <div class="col-md-3 badgewrapper text-center bg-success">
+                                    <span class="badgeresult ">30</span>
+                                    <span class="resultsupport">Pending Loans</span>
+                                </div>
+                                <div class="col-md-3 badgewrapper text-center bg-success">
+                                    <span class="badgeresult ">50</span>
+                                    <span class="resultsupport">Registered Clients</span>
+                                </div>
+                            </div>
+                             
+                             
+                        </div>
+                        <div class='row'>
+                            <div class="colorize-wrapper">
+                                <div class="col-md-3 col-sm-6 cardwrapper">
+                                    <div class="card bg-info">
+    	                                <a href="#">
+    									  <div class="card-img-top text-center card-icon"><div class="icon-box"><i class='t-icon fa fa-users fa-2x'></i></div></div>
+    									  <div class="card-block ">
+    									    <div class="text-center card-title">Borrower     <span class="badge">30</span></div>
+    									  </div>
+    									</a>
+    								</div>
+                                </div>
+                                <div class="col-md-3 col-sm-6 cardwrapper">
+                                    <div class="card bg-info">
+    	                                <a href="{% url 'assetmanager:assetlist'%} ">
+    									  <div class="card-img-top text-center card-icon"><div class="icon-box grey"><i class='fa fa-user fa-2x'></i></div></div>
+    									  <div class="card-block ">
+    									    <div class="text-center card-title">Asset    <span class="badge danger">60</span></div>
+    									  </div>
+    									</a>
+    								</div>
+                                </div>
+                                <div class="col-md-3 col-sm-6 cardwrapper">
+                                    <div class="card bg-info">
+    	                                <a href="#">
+    									  <div class="card-img-top text-center card-icon"><div class="icon-box blue "><i class='fa fa-bar-chart-o fa-2x'></i></div></div>
+    									  <div class="card-block ">
+    									    <div class="text-center card-title">Loans   <span class="badge success">70</span></div>
+    									  </div>
+    									</a>
+    								</div>
+                                </div>
+                                <div class="col-md-3 col-sm-6 cardwrapper">
+                                    <div class="card bg-info">
+    	                                <a href="#">
+    									  <div class="card-img-top text-center card-icon"><div class="icon-box orange"><i class='fa fa-money fa-2x'></i></div></div>
+    									  <div class="card-block ">
+    									    <div class="text-center card-title"> Borrower   <span class="badge">20</span></div>
+    									  </div>
+    									</a>
+    								</div>
+                                </div>
+
+                            </div>
+                      
+
+                        
+                            <div class="colorize-wrapper">
+                                <div class="col-md-3 col-sm-6 cardwrapper">
+                                    <div class="card bg-danger">
+                                        <a href="#">
+                                          <div class="card-img-top text-center card-icon"><div class="icon-box fifth"><i class='t-icon fa fa-list-alt fa-2x'></i></div></div>
+                                          <div class="card-block ">
+                                            <div class="text-center card-title">Roles</div>
+                                          </div>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="col-md-3 col-sm-6 cardwrapper">
+                                    <div class="card bg-danger">
+                                        <a href="loan_type">
+                                          <div class="card-img-top text-center card-icon"><div class="icon-box sixth"><i class='fa fa-line-chart fa-2x'></i></div></div>
+                                          <div class="card-block ">
+                                            <div class="text-center card-title">Products  <span class="badge">500</span></div>
+                                          </div>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="col-md-3 col-sm-6 cardwrapper">
+                                    <div class="card bg-danger">
+                                        <a href="#">
+                                          <div class="card-img-top text-center card-icon"><div class="icon-box  seventh"><i class='fa fa-bank fa-2x'></i></div></div>
+                                          <div class="card-block ">
+                                            <div class="text-center card-title">Wallet <span class="badge">40</span></div>
+                                          </div>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="col-md-3 col-sm-6 cardwrapper">
+                                    <div class="card bg-danger">
+                                        <a href="#">
+                                          <div class="card-img-top text-center card-icon"><div class="icon-box eighth"><i class='fa fa-envelope fa-2x'></i></div></div>
+                                          <div class="card-block ">
+                                            <div class="text-center card-title">Messages  <span class="badge">100</span></div>
+                                          </div>
+                                        </a>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                         <div class="space-30"></div>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="panel">
+                                    <header class="panel-heading">
+                                        <div class="panel-actions">
+                                            <a href="javascript:void(0)" class="panel-action panel-action-toggle" data-panel-toggle=""></a>                                   
+                                            <a href="javascript:void(0)" class="panel-action panel-action-dismiss" data-panel-dismiss=""></a>
+                                            <div class="dropdown pull-left">
+                                                <a href="#" data-toggle="dropdown" class="dropdown-toggle"><i class="ion-more"></i></a>
+                                                <ul class="dropdown-menu dropdown-menu-scale">
+                                                    <li><a href="javascript:void(0)">Action</a></li>
+                                                    <li><a href="javascript:void(0)">Just Action</a></li>
+                                                    <li><a href="javascript:void(0)">Action Now</a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <h2 class="panel-title">Recent Loans</h2>
+                                    </header>
+                                    <div class="panel-body">
+                                        <div class="scrollDiv">
+                                            <table class="table table-striped">
+                                                <tbody><tr>
+                                                        <th><div>Status</div></th>
+                                                <th><div>Clients</div></th>
+                                                <th align="center"><div>Orders#</div></th>
+                                                <th align="center"><div>Date</div></th>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <span class="label label-primary">Paid</span>
+                                                        <span class="label label-success">Active</span>
+                                                    </td>
+                                                    <td>Adones Evangelista</td>
+                                                    <td align="center">7556588</td>
+                                                    <td class="color-blue-grey" nowrap="" align="center"><span class="semibold">Today</span> 8:30</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <span class="label label-primary">Paid</span>
+                                                        <span class="label label-success">Active</span>
+                                                    </td>
+                                                    <td>Jude Angel Suares</td>
+                                                    <td align="center">7556588</td>
+                                                    <td class="color-blue-grey" nowrap="" align="center"><span class="semibold">Today</span> 16:30</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <span class="label label-primary">Paid</span>
+                                                        <span class="label label-default">Inactive</span>
+                                                    </td>
+                                                    <td>Kimmy Matillano</td>
+                                                    <td align="center">7556588</td>
+                                                    <td class="color-blue-grey" nowrap="" align="center"><span class="semibold">Yesterday</span></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <span class="label label-default">Unpaid</span>
+                                                        <span class="label label-default">Inactive</span>
+                                                    </td>
+                                                    <td>Saxon Ong</td>
+                                                    <td align="center">7556588</td>
+                                                    <td class="color-blue-grey" nowrap="" align="center">23th May</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <span class="label label-primary">Paid</span>
+                                                        <span class="label label-success">Active</span>
+                                                    </td>
+                                                    <td>Niko Curaza</td>
+                                                    <td align="center">7556588</td>
+                                                    <td class="color-blue-grey" nowrap="" align="center"><span class="semibold">Today</span> 8:30</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <span class="label label-primary">Paid</span>
+                                                        <span class="label label-success">Active</span>
+                                                    </td>
+                                                    <td>Adrian Mercurio</td>
+                                                    <td align="center">7556588</td>
+                                                    <td class="color-blue-grey" nowrap="" align="center"><span class="semibold">Today</span> 16:30</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <span class="label label-primary">Paid</span>
+                                                        <span class="label label-default">Inactive</span>
+                                                    </td>
+                                                    <td>Grace Patulada</td>
+                                                    <td align="center">7556588</td>
+                                                    <td class="color-blue-grey" nowrap="" align="center"><span class="semibold">Yesterday</span></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <span class="label label-default">Unpaid</span>
+                                                        <span class="label label-default">Inactive</span>
+                                                    </td>
+                                                    <td>Princely Cesar</td>
+                                                    <td align="center">7556588</td>
+                                                    <td class="color-blue-grey" nowrap="" align="center">23th May</td>
+                                                </tr>
+                                                </tbody></table>
+                                        </div>
+                                    </div><!--end panel body-->
+                                </div><!--end panel-->
+                            </div><!--end col 6-->
+                            <div class="col-md-6">
+                                <!-- a line chart will be here-->
+                            </div><!--end col 6-->
+                        </div>
+                      
+
+
+
+                    </div>
+                    {%endblock %}
+
+                    <!--footer start-->
+                   

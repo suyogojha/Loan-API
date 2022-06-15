@@ -1,0 +1,30 @@
+							{% for client in client_list %}
+			                                        <tr>
+			                                            <th scope="row">{{client.pk}}</th>
+			                                            <td>{{client.person.title}}</td>
+			                                            <td>{{client.first_name}}</td>
+			                                            <td>{{client.person.phone}} </td>
+			                                            <td>{{client.email}}</td>
+			                                            <!--td>{{asset.status}}</td-->
+			                                            <td>
+				                                            
+					                                            <button type="button"
+														              class="btn btn-success btn-sm js-update-product"
+														              data-url="{% url 'accounts:update_client' client.id %}">
+														                <span class="glyphicon glyphicon-pencil"></span> Edit
+														        </button>
+														        <button type="button"
+														              class="btn btn-warning btn-sm js-delete-product"
+														              data-url="{% url 'accounts:delete_client' client.id %}">
+														                <span class="glyphicon glyphicon-pencil"></span> Delete
+														        </button-->
+
+														   
+													    </td>
+													</tr>
+			                                       {% empty %}
+			                                       <tr>
+				                                       <td colspan="7" class="text-center">No Borrower Found. Please Create</td>
+			                                       </tr>
+			                                       {% endfor %}
+			                                       

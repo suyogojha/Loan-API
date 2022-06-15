@@ -1,0 +1,151 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+    
+<!-- Mirrored from bootstraplovers.com/templates/assan-v2.5/admin/default-admin/page-empty.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 04 Jan 2017 14:32:15 GMT -->
+<head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+        <title>{% block title %}{% endblock %}</title>
+
+        <!-- Bootstrap -->
+        <link href="{% static 'dashboard/assets/plugins/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
+        <!--side menu plugin-->
+        <link href="{% static 'dashboard/assets/plugins/hoe-nav/hoe.css'%}" rel="stylesheet">
+        <!-- icons-->
+        <link href="{% static 'dashboard/assets/plugins/ionicons/css/ionicons.min.css' %}" rel="stylesheet">
+         <link href="{% static 'dashboard/css/cards.css' %}" rel="stylesheet">
+          <link href="{% static 'dashboard/css/custom.css' %}" rel="stylesheet">
+        <link href="{% static 'dashboard/assets/plugins/font-awesome/css/font-awesome.min.css'%}" rel="stylesheet">
+        <!--template custom css file-->
+        <link href="{% static 'dashboard/assets/css/style.css'%}" rel="stylesheet">
+
+        <script src="{% static 'dashboard/assets/js/modernizr.js'%}" '></script>
+
+    </head>
+    <body hoe-navigation-type="vertical" hoe-nav-placement="left" theme-layout="wide-layout">
+
+        <!--side navigation start-->
+        <div id="hoeapp-wrapper" class="hoe-hide-lpanel" hoe-device-type="desktop">
+            <header id="hoe-header" hoe-lpanel-effect="shrink">
+                <div class="hoe-left-header">
+                    <a href="#">Loan Management System</a>
+                    <span class="hoe-sidebar-toggle"><a href="#"></a></span>
+                </div>
+
+                <div class="hoe-right-header bg-info"  hoe-position-type="relative">
+                    <span class="hoe-sidebar-toggle"><a href="#"></a></span>
+                    <ul class="left-navbar">
+                        <li>
+                            <div class="top-search hidden-xs">
+                                <form>
+                                    <input type="text" class="form-control" placeholder="Search for Clients here">
+                                    <i class="ion-search"></i>
+                                </form>
+                            </div>
+                        </li>
+
+                    </ul>
+                    <ul class="right-navbar navbar-right bg-info">
+                        <li class="dropdown">
+                            <a href="#" data-toggle="dropdown" class="dropdown-toggle"> <i class="ion-ios-bell-outline"></i> <span class="label label-danger">10</span></a>
+                            <ul class="dropdown-menu dropdown-menu-scale lg-dropdown notifications">
+                                <li> <p>You have 20 new notifications <a href="#"> Mark all Read</a></p></li>
+                                <li class="unread-notifications">
+                                    <a href="#">
+                                        <i class="ion-ios-email-outline pull-right"></i>
+                                        <span class="line">You have 100 Messages</span>
+                                        <span class="small-line">3 Minutes ago</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <i class="ion-social-twitter-outline pull-right"></i>
+                                        <span class="line">You have 70 new followers</span>
+                                        <span class="small-line">8 Minutes ago</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <i class="ion-ios-download-outline pull-right"></i>
+                                        <span class="line">Download Complete</span>
+                                        <span class="small-line">6 Minutes ago</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+                            <a href="#" data-toggle="dropdown" class="dropdown-toggle"><img src="assets/images/us.png" alt=""> English</a>
+                            <ul class="dropdown-menu dropdown-menu-scale lang-dropdown">
+                                <li><a href="#"><img src="assets/images/us.png" alt=""> English </a></li>
+                                <li><a href="#"><img src="assets/images/es.png" alt=""> Spanish </a></li>
+                                <li><a href="#"><img src="assets/images/tr.png" alt=""> Chinese </a></li>
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+                            <a href="#" data-toggle="dropdown" class="dropdown-toggle"><img src="assets/images/avtar.png" alt="" width="30" class="img-circle"> Admin</a>
+                            <ul class="dropdown-menu dropdown-menu-scale user-dropdown">
+                                <li><a href="#"><i class="ion-email-unread"></i> Inbox <span class="label label-warning">3</span></a></li>
+                                <li><a href="#"><i class="ion-person"></i> Profile </a></li>
+                                <li><a href="#"><i class="ion-settings"></i> Settings <span class="label label-primary">3/9</span></a></li>
+                                <li><a href="#"><i class="ion-calendar"></i> Calendar </a></li>
+                                <li><a href="#"><i class="ion-ios-compose"></i> Tasks </a></li>
+                                <li><a href="#"><i class="ion-log-out"></i> Logout </a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </header>
+            <div id="hoeapp-container" hoe-color-type="lpanel-bg7" hoe-lpanel-effect="shrink">
+                <aside id="hoe-left-panel" hoe-position-type="absolute" style="background-color: black;">
+
+                    <ul class="nav panel-list" style="background-color: black;">
+
+                        <li>
+                            <a href="/dashboard/" style="background-color: black;" >
+                                <i class="fa fa-home" style="color: white;"></i>
+                                <span class="menu-text" style="color: white;">Dashboard</span>
+                                <span class="selected"></span>
+                            </a>
+                        </li>
+                       
+                        
+                    </ul>
+                </aside><!--aside left menu end-->
+            <!-- /sidebar menu -->
+                   {%block content %}
+                   {%endblock%}
+            <!-- /menu footer buttons -->
+            
+                    <div class="footer bg-success">
+                           <div class="row">
+                            <div class="col-sm-12">
+                                <span>&copy; Copyright 2021. Loan Management System</span>
+                            </div>
+                        </div>
+                    </div>
+                    <!--footer end-->
+                </section><!--end main content-->
+            </div>
+        </div><!--end wrapper-->
+
+
+
+        <!--Common plugins-->
+        <script src="{% static 'dashboard/assets/plugins/jquery/dist/jquery.min.js' %}"></script>
+        <script src="{% static 'dashboard/assets/plugins/bootstrap/js/bootstrap.min.js' %}"></script>
+        <script src="{% static 'dashboard/assets/plugins/hoe-nav/hoe.js'%}"></script>
+        <script src="{% static 'dashboard/assets/plugins/pace/pace.min.js' %}"></script>
+        <script src="{% static 'dashboard/assets/plugins/slimscroll/jquery.slimscroll.min.js' %}"></script>
+        <script src="{% static 'dashboard/assets/js/app.js' %}"></script>
+        <script src="{% static 'dashboard/js/product.js' %}"></script>
+         <script src="{% static 'dashboard/js/jquery.formset.js' %}"></script>
+
+         
+
+    </body>
+
+<!-- Mirrored from bootstraplovers.com/templates/assan-v2.5/admin/default-admin/page-empty.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 04 Jan 2017 14:32:15 GMT -->
+</html>

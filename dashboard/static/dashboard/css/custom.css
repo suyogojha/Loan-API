@@ -1,0 +1,142 @@
+.card-icon{
+	
+	color:#fff;
+	margin-bottom: 30px
+	margin-top:30px;
+}
+.card-title{
+	margin-bottom :36px;
+	font-size: 2rem;
+	color:#3d3d3d;
+}
+
+.card{
+	background-color: #fcfcfc;
+	margin-top: 20px;
+	box-shadow: -1px 0px 0px 0px rgba(0,0,0,0.1);
+}
+.badgewrapper{
+	background-color:#fff;
+	border-color: #e8e8ee;
+	border-style: solid;
+	min-height: 90px;
+	border-width: 1px;
+}
+.badgewrapper:hover{
+	box-shadow: 0px -6px 0px 0px #e6e6e6 inset;
+	 transition:all 0.3s;
+}
+
+
+.card:hover{
+    display: block;
+    text-decoration: none;
+    border-radius: 2px;
+    top:-5px;
+    border: 1px solid rgba(0,0,0,.05);
+    background-clip: padding-box;
+    box-shadow: 0 6px 2px rgba(0,0,0,.05);
+    position: relative;
+    /**transition:all 1s;**/
+}
+
+
+
+.badgeresult, .resultsupport{
+	display: block;
+}
+.badgeresult{
+	font-size: 3.6rem;
+    line-height: 4rem;
+    font-weight: 300;
+    padding-top: 20px;
+    padding-bottom: 5px
+}
+
+.resultsupport{
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-size: 1.4rem;
+    line-height: 2rem;
+    padding-bottom: 15px
+}
+
+.t-icon{
+	
+
+}
+.icon-box{
+	height: 56px;
+	width:56px;
+	margin:24px auto -8px;
+	border-radius: 100px;
+	background-color: #ff2d55;
+	padding-top: 14px;
+	margin-bottom: 30px;
+}
+.grey{
+	background-color: #8e8e93 !important;
+}
+
+.orange{
+	background-color: #007aff;
+}
+
+.blue{
+	background-color: #4cd964;
+}
+
+.fifth{
+     background-color: #fc0
+}
+.sixth{
+    background-color: #5ac8fa
+}
+.eighth{
+    background-color: #ff3b30
+}
+.seventh{
+	background-color: #5856D6 
+}
+
+.table-striped>tbody>tr:nth-of-type(even) {
+    }
+.table-striped>thead>tr{
+	background-color:#36c6d3!important ;
+	
+}
+.panel-title{
+	display:inline;
+
+}
+.formset{
+	
+	margin-bottom: 10px;
+}
+/* modal */
+.modal-content{
+	overflow-y: scroll !important;
+	/*max-height: 600px !important;*/
+	max-height: calc(100vh - 64px);
+}
+
+.mtitle{
+	text-align: center;
+}
+@media (min-width: 768px){
+.modal-dialog {
+    width: 744px;
+    margin: 30px auto;
+
+}
+}
+
+.lmsinput{
+	border-radius: 0px;
+	border-color: rgba(0,0,0,.55);
+	height: 34px;
+	padding: 0 24px 0 8px;
+    background-color: #fff;
+    text-overflow: ellipsis;
+}
